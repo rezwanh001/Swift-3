@@ -13,8 +13,8 @@ var msg = hello + world
 print("Hello \(world)")
 ```
 
-/*
-// Data type
+## Data type
+```swift
 let pi = 3.14159
 
 var myAge:Int = 21
@@ -37,10 +37,10 @@ var two: Int = 2
 var five = three + Double(two)
 //print(five)
 print("3: \(Int(3.14))")
-*/
+```
 
-/*
-// Conditional
+## Conditional
+```swift
 var age:Int = 8
 
 if age < 5{
@@ -83,10 +83,11 @@ case 89...100:
 default:
     print("You got on F")
 }
-*/
+```
 
-/*
-// Basic Operation
+
+## Basic Operation
+```swift
 print("5 + 4 = \(5 + 4)")
 print("5 - 4 = \(5 - 4)")
 print("5 * 4 = \(5 * 4)")
@@ -104,10 +105,10 @@ print(randNum)
 
 // There is also sin, cos, tan, asin, acos, atan, sinh, cosh, tanh
 // print("log(2.718) = \( log2(2.718) )")
-*/
+```
 
-/*
-// String
+## String
+```swift
 var randStr = "This is a random string"
 var randStr2 = " and here is another"
 var randStr3 = randStr + randStr2
@@ -138,10 +139,10 @@ if let hereMatch = randStr2.range(of: "here"){
     randStr2.replaceSubrange(hereMatch, with: "there")
 }
 print(randStr2)
-*/
+```
 
-/*
-// Array
+## Array
+```swift
 var array1 = [Int]()
 array1.append(5)
 array1 += [7,9]
@@ -206,10 +207,10 @@ repeat {
 } while (magicNum != guess)
 
 print("Magic Number was \(magicNum)")
-*/
+```
 
-/*
-// Dictionary
+## Dictionary
+```swift
 var dict1 = [Int: String]()
 print("Empty : \(dict1.isEmpty)")
 
@@ -233,10 +234,10 @@ print(cust)
 for (key, value) in cust {
     print("\(key) : \(value)")
 }
-*/
+```
 
-/*
-//tuple
+## Tuples
+```swift
 let height: Double = 6.25
 let weight: Int = 175
 
@@ -245,10 +246,10 @@ print("Height : \(myData.0)")
 
 let myData2 = (height: 6.25, weight: 175)
 print("Weight: \(myData2.weight)")
-*/
+```
 
-/*
-// Optional
+## Optional
+```swift
 var politicalParty: String?
 politicalParty = "Independent"
 
@@ -265,10 +266,10 @@ if let party = politicalParty {
 
 let party = politicalParty ?? "No Party"
 print(party)
-*/
+```
 
-/*
-// Function
+## Function
+```swift
 func getSum(num1: Int, num2: Int){
     print("Sum : \(num1 + num2)")
 }
@@ -356,10 +357,10 @@ let sum2 = nums2.reduce(0) {
     return x + y
 }
 print(sum2)
-*/
+```
 
-/*
-// enumeration
+## Enumeration
+```swift
 enum Emotion{
     case joy
     case anger
@@ -370,10 +371,10 @@ enum Emotion{
 var feeling = Emotion.joy
 feeling = .anger
 print("Angry : \(feeling == .anger)")
-*/
+```
 
-/*
-// struct
+## Struct
+```swift
 struct Rectangle {
     var height = 0.0
     var length = 0.0
@@ -385,10 +386,10 @@ struct Rectangle {
 }
 let myRect = Rectangle(height: 10.0, length: 5.0)
 print("Area : \(myRect.height) * \(myRect.length) = \(myRect.area())")
-*/
+```
 
-/*
-// Class
+## Class
+```swift
 class Animal {
     var name: String = "No Name"
     var height: Double = 0.0
@@ -441,10 +442,10 @@ print("2 + 5 = \(spot.getSum(num1: 2, num2: 5))")
 print("2.2 + 5.6 = \(spot.getSum(num1: 2.2, num2: 5.6))")
 
 print("Is Spot a Dog : \(spot is Animal)")
-*/
+```
 
-/*
-// Protocol
+## Protocol
+```swift
 protocol Flyable {
     var flies: Bool { get set }
     
@@ -468,10 +469,10 @@ var fordF150 = Vehicle()
 fordF150.name = "Ford f-150"
 fordF150.flies = false
 print(fordF150.fly(distMiles: 10))
-*/
+```
 
-/*
-// Error Handling
+## Error Handling
+```swift
 enum DivisionError: Error{
     case DivideByZero
 }
@@ -487,10 +488,10 @@ do {
 } catch DivisionError.DivideByZero{
     print("Can't Divide by Zero")
 }
-*/
+```
 
-/*
-//extension
+## Extension
+```swift
 extension Double{
     var km: Double { return self * 1000.0 }
     var m: Double {return self }
@@ -507,4 +508,4 @@ print("One Meter is \(oneMeter) inches")
 
 var randNum2:Double = 5
 print("Square of 5 : \(randNum2.square())")
-*/
+```
