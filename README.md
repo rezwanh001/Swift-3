@@ -442,6 +442,76 @@ print("2 + 5 = \(spot.getSum(num1: 2, num2: 5))")
 print("2.2 + 5.6 = \(spot.getSum(num1: 2.2, num2: 5.6))")
 
 print("Is Spot a Dog : \(spot is Animal)")
+
+class Example {
+    var a = 0
+    var b: String
+    
+    init(a: Int){ // Constructor
+        self.a = a
+        b = "name"
+    }
+}
+let eg = Example(a: 1)
+print(eg.a) // 1
+
+class Example2 {
+    var a = 0
+    var b = 0
+    
+    init (_ a: Int, _ b: Int) {
+        self.a = a
+        self.b = b
+    }
+}
+let eg2 = Example2(1,2)
+print(eg2.a) // 1
+print(eg2.b) // 2
+
+class Podcast {
+    lazy var episode = Episode()
+}
+class Episode {
+    var audio = "somefile.mp3"
+}
+var podcast = Podcast() // episode is not initialized
+print(podcast.episode.audio) // somefile.mp3
+
+class Window {
+    var x = 0.0, y = 0.0
+    var width = 100.0, height = 100.0
+    
+    var center: (Double, Double) {
+        get {
+            return (width / 2, height / 2)
+        }
+        set(newVal) {
+            x = newVal.0 - (width / 2)
+            y = newVal.1 - (height / 2)
+        }
+    }
+}
+var win = Window()
+print(win.center) // (50.0, 50.0)
+win.center = (0.0, 10.0)
+print(win.x) //  -50.0
+print(win.y) //  -40.0
+
+class Song {
+    var title = ""
+    var duration = 0.0
+    var metaInfo: [String:String] {
+        return [
+            "title": self.title
+            "duration": NSString(format: "%.2f", self.duration) as String,
+        ]
+    }
+}
+var song = Song()
+song.title = "Rootshine Revival"
+song.duration = 2.01
+print(song.metaInfo["title"]!) // Rootshine Revival
+print(song.metaInfo["duration"]!) // 2.01 
 ```
 
 ## Protocol
